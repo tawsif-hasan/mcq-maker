@@ -1,0 +1,15 @@
+{
+  "name": "mcq_creator",
+  "version": "1.0.0",
+  "description": "Web Application For Creating Multiple Choice Questions especially for institutions or individuals in Bangladesh",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohammad Tawsif Hasan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
