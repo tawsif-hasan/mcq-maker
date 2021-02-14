@@ -1,0 +1,30 @@
+.questions p{
+    font-size: 25px;
+}
+
+.question-info-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    margin: 5px;
+}
+
+.options{
+    margin-left: 5px;
+}
+
+.questions{
+    width: 75%;
+}
+
+.site-title{
+    text-align: center;
+}

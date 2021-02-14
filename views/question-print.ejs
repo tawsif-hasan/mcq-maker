@@ -6,15 +6,18 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <% for(q=0; q!=5; q++){ %>
-            <h3> <%= question[q] %> </h3>
-            <p> <%= optionA[q] %> </p>
-            <p> <%= optionB[q] %> </p>
-            <p> <%= optionC[q] %> </p>
-            <p> <%= optionD[q] %> </p>
+        <h4 class="institution">Name of the institution <%= institutionName %></h4>
+        <h4 class="marks">Total Marks: <%= totalMarks %></h4>
+        <h4 class="time">Total Time: <%= totalTime %> mins</h4>
+        <% for(q=0; q<noOfQuestions; q++){ %>
+        
+            <h4> <%= q+1+ ". " + question[q]  %> </h3>
+                <p>  &nbsp &nbsp &nbsp <%= "A."+ optionA[q]%> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      <%= "B."+ optionB[q] %> </p>
+                <p>  &nbsp &nbsp &nbsp <%= "C."+ optionC[q] %> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     <%= "D."+ optionD[q] %> </p>
+        
         <% } %>
     </body>
 </html>

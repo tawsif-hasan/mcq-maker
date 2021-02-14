@@ -6,24 +6,36 @@
         <title>Question</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <div class="question-form">
         <form action = "/question" method="post">
-            
+            <label for="noOfQuestions">Number of Questions:</label>
+                <input type="text" required id="noOfQuestions" name="noOfQuestions" value= <%=noOfQuestions %>>
+            <label for="institutionName">Number of Questions:</label>
+                <input type="text" id="institutionName" name="institutionName" value= <%= institutionName %>>
+            <label for="totalMarks">Total Marks:</label>
+                <input type="text" id="totalMarks" name="totalMarks" value=<%= totalMarks %> >
+            <label for="totalTime">Total Time:</label>
+                <input type="text" id="totalTime" name="totalTime" value=<%= totalTime %> ><br>
+        
         <% for(i=1;i<=noOfQuestions;i++){ %>
-            <label for = "question">Question</label>
-                <input type="text" id = "question" name= "question"><br>
-            <label for="optionA">A.</label>
-                <input type="text" id = "optionA" name="optionA">
-            <label for="optionB">B.</label>
-                <input type="text" id = "optionB" name="optionB"><br>
-            <label for="optionC">C.</label>
-                <input type="text" id = "optionC" name="optionC">
-            <label for="optionD">D.</label>
-                <input type="text" id = "optionD" name="optionD"><br>
+            <label for = <%= i %>><%= i %>.</label>
+                <input class= "questions" type="text" id =<%= i %> name= "question"><br>
+            <div class="options">
+                <label for="option<%= i %>A" >A.</label>
+                    <input type="text" id = "option<%= i %>A" name="optionA">
+                <label for="option<%= i %>B">B.</label>
+                    <input type="text" id = "option<%= i %>B" name="optionB"><br>
+                <label for="option<%= i %>C">C.</label>
+                    <input type="text" id = "option<%= i %>C" name="optionC">
+                <label for="option<%= i %>D">D.</label>
+                    <input type="text" id = "option<%= i %>D" name="optionD"><br>
+            </div>
         <% }    %>
             <button type="submit" name="submit">Confirm</button>
+        </div>
         </form>
     </body>
 </html>
