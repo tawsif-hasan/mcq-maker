@@ -28,3 +28,9 @@ input{
 .site-title{
     text-align: center;
 }
+
+@media screen and (max-width:768px){
+    .options-input{
+        display: block;
+    }
+}
